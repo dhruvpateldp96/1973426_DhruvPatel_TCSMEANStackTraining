@@ -2,10 +2,8 @@ import React from "react";
 import Footer from "../../layouts/Footer";
 import Navbar from "../../layouts/Navbar";
 import { StyleSheet, css } from "aphrodite-jss";
-import MyCarousel from "./MyCarousel";
 import MyCard from "./MyCard";
-import { Carousel } from "antd";
-import "antd/dist/antd.css";
+
 const Assignment1 = () => {
   return (
     <div>
