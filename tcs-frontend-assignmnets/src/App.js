@@ -10,13 +10,17 @@ import Footer from "./components/layouts/Footer";
 import Assignment1 from "./components/containers/Assignment1/Assignment1";
 
 import store from "./store";
+import Landing from "./components/Landing";
+import Restaurant from "./components/containers/Sec7_1.20/Restaurant";
 
 const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Navbar />
-        <Route exact path="/" component={Assignment1} />
+        <Route exact path="/" component={Landing} />
+        <Route path="/assignment/1" component={Assignment1} />
+        <Route path="/restaurant" component={Restaurant} />
         {/* <Route exact path="/movie/:id" component={Movie} /> */}
         <Footer />
       </Router>

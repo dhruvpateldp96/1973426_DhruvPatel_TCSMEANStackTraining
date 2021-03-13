@@ -3,41 +3,47 @@ import Footer from "../../layouts/Footer";
 import Navbar from "../../layouts/Navbar";
 import { StyleSheet, css } from "aphrodite-jss";
 import MyCard from "./MyCard";
+import MyCarousel from "./MyCarousel";
+import "./index.css";
 
+const arr = [
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+  <MyCard />,
+];
 const Assignment1 = () => {
   return (
     <div>
       <div className={css(styles.heading)}>
         <h1>Assignment1 March 12 (Design Sell)</h1>
       </div>
-      <div className={css(styles.cardContainer)}>
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-        <MyCard />
-      </div>
+      {/* <div className={css(styles.cardContainer)}> */}
+
+      <MyCarousel data={arr} />
+      {/* </div> */}
     </div>
   );
 };
