@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Input, Button, Checkbox, Divider } from "antd";
 import { StyleSheet, css } from "aphrodite-jss";
 import { Table, Popconfirm, Tag, Space } from "antd";
+import { v4 as uuidv4 } from "uuid";
 
 const layout = {
   labelCol: {
@@ -18,9 +19,25 @@ const tailLayout = {
   },
 };
 
+const useStateWithSessionStorage = (sessionStorageKey, initVal) => {
+  const [value, setValue] = React.useState(
+    JSON.parse(sessionStorage.getItem(sessionStorageKey)) || initVal
+  );
+
+  useEffect(() => {
+    sessionStorage.setItem(sessionStorageKey, JSON.stringify(value));
+  }, [value]);
+
+  return [value, setValue];
+};
+
 const BudgetPlanner = () => {
-  const [tableArr, setTableArr] = useState([]);
-  const [total, setTotal] = useState(0);
+  // Advanced state management using LocalStorage
+  const [tableArr, setTableArr] = useStateWithSessionStorage("tableArr", []);
+  const [total, setTotal] = useStateWithSessionStorage("total", 0);
+
+  // const [tableArr, setTableArr] = useState([]);
+  // const [total, setTotal] = useState(0);
 
   const onFinish = (values) => {
     console.log("Success:", values);
@@ -30,7 +47,7 @@ const BudgetPlanner = () => {
         vendor: values.Vendor,
         amt: values.Deal_Amount,
         address: values.Address,
-        key: new Date(),
+        key: uuidv4(),
         addedToBudget: false,
       },
     ]);
@@ -46,18 +63,15 @@ const BudgetPlanner = () => {
     {
       title: "Vendor",
       dataIndex: "vendor",
-      // key: "vendor",
       render: (text) => <a>{text}</a>,
     },
     {
       title: "Deal Amount",
       dataIndex: "amt",
-      // key: "amt",
     },
     {
       title: "Address",
       dataIndex: "address",
-      // key: "address",
     },
     {
       title: "Pass or Decline",
@@ -99,29 +113,6 @@ const BudgetPlanner = () => {
     },
   ];
 
-  const data = [
-    {
-      key: "1",
-      name: "John Brown",
-      age: 32,
-      address: "New York No. 1 Lake Park",
-      tags: ["nice", "developer"],
-    },
-    {
-      key: "2",
-      name: "Jim Green",
-      age: 42,
-      address: "London No. 1 Lake Park",
-      tags: ["loser"],
-    },
-    {
-      key: "3",
-      name: "Joe Black",
-      age: 32,
-      address: "Sidney No. 1 Lake Park",
-      tags: ["cool", "teacher"],
-    },
-  ];
   return (
     <div className={css(styles.container)}>
       <div className={css(styles.formAndStatecontainer)}>
@@ -192,7 +183,7 @@ const BudgetPlanner = () => {
         >
           <h4>The state of this project is displayed here</h4>
           {tableArr.map((obj) => (
-            <p>
+            <p key={obj.key}>
               vendor: {obj.vendor}, amt: {obj.amt}, address: {obj.address},
               addedToBudget:{obj.addedToBudget},
             </p>
