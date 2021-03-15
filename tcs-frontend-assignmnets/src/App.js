@@ -12,6 +12,7 @@ import Assignment1 from "./components/containers/Assignment1/Assignment1";
 import store from "./store";
 import Landing from "./components/Landing";
 import Restaurant from "./components/containers/Sec7_1.20/Restaurant";
+import BudgetPlanner from "./components/containers/P1S6-1.22BudgetPlanner/BudgetPlanner";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route exact path="/" component={Landing} />
         <Route path="/assignment/1" component={Assignment1} />
         <Route path="/restaurant" component={Restaurant} />
+        <Route path="/budgetplanner" component={BudgetPlanner} />
         {/* <Route exact path="/movie/:id" component={Movie} /> */}
         <Footer />
       </Router>

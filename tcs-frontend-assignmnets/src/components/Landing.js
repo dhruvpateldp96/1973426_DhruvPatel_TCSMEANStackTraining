@@ -14,7 +14,13 @@ const Landing = () => {
         className="navbar-brand nav-link text-lg brand-text"
         to="/restaurant"
       >
-        <h1>Section 7 1.20</h1>
+        <h1>Section_7_1.20</h1>
+      </Link>
+      <Link
+        className="navbar-brand nav-link text-lg brand-text"
+        to="/budgetplanner"
+      >
+        <h1>Phase1_S-6_1.22_(Budget Planner)</h1>
       </Link>
     </div>
   );

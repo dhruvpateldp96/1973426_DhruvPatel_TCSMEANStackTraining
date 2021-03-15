@@ -18,6 +18,12 @@ function Navbar() {
           Assignment 3
         </Link> 
       </div>*/}
+      <Link
+        className="navbar-brand nav-link text-white text-lg brand-text"
+        to="/"
+      >
+        Index
+      </Link>
       <ul className="navbar-nav ml-auto text-light d-inline-block">
         <li className="nav-item d-inline-block mr-4">
           <i className="fab fa-react fa-5x" id="react-logo" />
