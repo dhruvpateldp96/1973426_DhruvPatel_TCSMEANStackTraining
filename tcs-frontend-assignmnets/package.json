@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.13.1",
     "aphrodite-jss": "^2.1.0",
+    "aws-sdk": "^2.865.0",
     "axios": "^0.21.1",
     "formik": "^2.2.6",
     "react": "^17.0.1",

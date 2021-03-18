@@ -22,6 +22,10 @@ const Landing = () => {
       >
         <h1>Phase1_S-6_1.22_(Budget Planner)</h1>
       </Link>
+
+      <Link className="navbar-brand nav-link text-lg brand-text" to="/blogs">
+        <h1>Phase1 End Blogs</h1>
+      </Link>
     </div>
   );
 };
