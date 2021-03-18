@@ -44,12 +44,21 @@ const BlogCard = ({
       ]}
     >
       <Meta
-        style={{ overflow: "hidden" }}
+        // style={{ overflow: "hidden" }}
         avatar={
           <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
         }
         title={title}
-        description={description}
+        description={
+          <div
+            style={{
+              height: "22px",
+              overflow: "hidden",
+            }}
+          >
+            {description}
+          </div>
+        }
       />
     </Card>
   );

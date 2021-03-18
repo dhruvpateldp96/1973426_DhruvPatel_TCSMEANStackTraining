@@ -1,0 +1,16 @@
+To view the project. 
+
+1. Click on the link https://dhruvpateldp96.github.io/#/blogs
+2. Click on Phase 1 End Blogs.
+3. View the assignment.
+
+################################### THE CODE DESCRIPTION ###############################
+1. Used AWS S3 and cloudinary to store the photos in the cloud 
+2. Implemented Carousel to view multiple images.
+3. Implemented Drag and Drop Functionalities
+4. Used SessionStorage to persist data
+5. Used React to create the frontend
+6. Managed Interlinked states using React Hooks (useState and useEffect)
+
+
+Code can be found here https://github.com/dhruvpateldp96/1973426_DhruvPatel_TCSMEANStackTraining/tree/master/tcs-frontend-assignmnets/src/components/containers/P1-Blogging

@@ -16,14 +16,8 @@ const AddBlog = ({ onFormSubmit }) => {
     if (Array.isArray(e)) {
       return e;
     }
-    // const urls = e.fileList.map((file) => file.url);
     return e && e.fileList;
   };
-
-  // const onFinish = (values) => {
-  //   console.log("Success:", values);
-  //   // setBlogList();
-  // };
 
   return (
     <div>
