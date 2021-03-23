@@ -26,6 +26,13 @@ const Landing = () => {
       <Link className="navbar-brand nav-link text-lg brand-text" to="/blogs">
         <h1>Phase1 End Blogs</h1>
       </Link>
+
+      <Link
+        className="navbar-brand nav-link text-lg brand-text"
+        to="/cartmanagement"
+      >
+        <h1>P2-CArtManagement</h1>
+      </Link>
     </div>
   );
 };

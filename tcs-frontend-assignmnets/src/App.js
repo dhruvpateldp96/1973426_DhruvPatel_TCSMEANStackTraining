@@ -14,6 +14,7 @@ import Landing from "./components/Landing";
 import Restaurant from "./components/containers/Sec7_1.20/Restaurant";
 import BudgetPlanner from "./components/containers/P1S6-1.22BudgetPlanner/BudgetPlanner";
 import Blogging from "./components/containers/P1-Blogging/Blogging";
+import CartManagement from "./components/containers/P2-ShoppingCart/CartManagement";
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
         <Route path="/restaurant" component={Restaurant} />
         <Route path="/budgetplanner" component={BudgetPlanner} />
         <Route path="/blogs" component={Blogging} />
+        <Route path="/cartmanagement" component={CartManagement} />
+
         {/* <Route exact path="/movie/:id" component={Movie} /> */}
         <Footer />
       </Router>

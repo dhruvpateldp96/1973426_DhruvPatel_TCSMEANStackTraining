@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import searchReducer from './searchReducer';
+import Reducer from './Reducer';
 
 export default combineReducers({
-  phones: searchReducer
+  items: Reducer
 });
