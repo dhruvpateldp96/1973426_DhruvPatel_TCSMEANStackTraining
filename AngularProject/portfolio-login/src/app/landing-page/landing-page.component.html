@@ -1,0 +1,43 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="https://avatars.githubusercontent.com/u/33395565?s=460&u=4ad26c92d6e21bd7f6ab8990def6b9ba9b604865&v=4"
+                id="icon" alt="User Icon" />
+        </div>
+        <h1>Welcome {{firstName}}</h1>
+
+        <form #addInForm="ngForm" (ngSubmit)="submitForm(addInForm.value);">
+            <input type="text" id="firstName" class="fadeIn second" name="firstName" placeholder="firstName" ngModel>
+            <input type="text" id="lastName" class="fadeIn second" name="lastName" placeholder="lastName" ngModel>
+            <input type="submit" class="fadeIn fourth" value="Add in Table">
+
+        </form>
+        <!-- Login Form -->
+        <table style="width:100%">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>{{firstName}}</td>
+                <td>{{lastName}}</td>
+                <td>{{login}}</td>
+            </tr>
+            <tr *ngFor="let entry of tableData ">
+                <td>{{entry.firstName}}</td>
+                <td>{{entry.lastName}}</td>
+                <td>{{entry.login}}</td>
+            </tr>
+        </table>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>
