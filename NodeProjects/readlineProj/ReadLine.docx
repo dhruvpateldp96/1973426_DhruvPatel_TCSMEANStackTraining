@@ -1,0 +1,4 @@
+ReadLine Proj: 
+1. Uses module.exports to export questions module 
+2. Used debugger to debug the application 
+3. Used fileSystem (fs) to write the data to a file in append mode
