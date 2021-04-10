@@ -1,0 +1,12 @@
+1. Portfolio Assignment
+
+################################### THE CODE DESCRIPTION ###############################
+1. Used routers to make component routes and keep the history. 
+2. Implemented flexbox and bootstrap to stylize the product.
+3. Implemented sessionStorage to store the data.
+4. Used services for DI.
+5. Used Angular to create the frontend
+6. Used lifecycle hooks
+
+
+Code can be found here https://github.com/dhruvpateldp96/1973426_DhruvPatel_TCSMEANStackTraining/tree/master/AngularProject/portfolio-login/src/app

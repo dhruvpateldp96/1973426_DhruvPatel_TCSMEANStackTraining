@@ -1,0 +1,16 @@
+To view the project. 
+
+1. Click on the link https://dhruvpateldp96.github.io./#/cartmanagement
+2. Click on P2-CArtManagement.
+3. View the assignment.
+
+################################### THE CODE DESCRIPTION ###############################
+1. Used react-redux to persist the data. 
+2. Implemented flexbox and bootstrap to stylize the product.
+3. Implemented sort by size and cost functionality in react-redux.
+4. Used typescript to stringly type the component.
+5. Used React to create the frontend
+6. Managed Interlinked states using React Hooks (useState and useEffect)
+
+
+Code can be found here https://github.com/dhruvpateldp96/1973426_DhruvPatel_TCSMEANStackTraining/tree/master/tcs-frontend-assignmnets/src/components/containers/P2-ShoppingCart
