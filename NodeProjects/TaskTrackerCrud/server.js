@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const http = require("http");
 //Load env vars
 dotenv.config({ path: "./config/config.env" });
 
@@ -10,6 +11,14 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const app = express();
+let webSocketServer = http.createServer(app);
+var socketio = require("socket.io")(webSocketServer, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+});
+
 app.use(cors());
 
 app.use(
@@ -20,6 +29,7 @@ if (process.env.NODE_ENV == "development") {
   app.use(morgan("dev"));
 }
 
+require("./sockets/index")(socketio);
 require("./routes/index")(app);
 
 const PORT = process.env.PORT || 4000;
@@ -30,7 +40,7 @@ const connect = mongoose.connect(process.env.MONGO_URI, {
 
 connect.then(
   (db) => {
-    app.listen(PORT, "localhost", () => {
+    webSocketServer.listen(PORT, "localhost", () => {
       console.log("server running", PORT);
     });
   },
