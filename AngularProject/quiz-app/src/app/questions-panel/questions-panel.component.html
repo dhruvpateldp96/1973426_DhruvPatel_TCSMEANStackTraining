@@ -1,0 +1,25 @@
+  <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <!-- <div class="fadeIn first">
+          <img src="https://avatars.githubusercontent.com/u/33395565?s=460&u=4ad26c92d6e21bd7f6ab8990def6b9ba9b604865&v=4"
+              id="icon" alt="User Icon" />
+      </div> -->
+
+      <!-- Login Form -->
+      <form #questionForm="ngForm" (ngSubmit)="submitForm(questionForm);">
+        <div class="form-group">
+          <label for="question">Question</label>
+          <input type="text" class="form-control" name="question" placeholder="Enter Question" ngModel>
+        </div>
+        <span><input type="text" class="form-control" name="choice1" placeholder="Choice1" ngModel> <input type="checkbox" name="choiceCheck1" ngModel></span>
+        <span><input type="text" class="form-control" name="choice2" placeholder="Choice2" ngModel> <input type="checkbox" name="choiceCheck2" ngModel></span>
+        <span><input type="text" class="form-control" name="choice3" placeholder="Choice3" ngModel> <input type="checkbox" name="choiceCheck3" ngModel></span>
+        <span><input type="text" class="form-control" name="choice4" placeholder="Choice4" ngModel> <input type="checkbox" name="choiceCheck4" ngModel></span>
+        <input type="submit" class="fadeIn fourth" value="Add Question">
+
+      </form>
+
+  </div>
+

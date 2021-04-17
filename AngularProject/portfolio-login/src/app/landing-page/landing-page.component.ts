@@ -14,7 +14,7 @@ export class LandingPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let userVal = JSON.parse(sessionStorage.getItem('formVal'))
+    let userVal = JSON.parse(sessionStorage.getItem('formVal') || "{}")
     this.firstName = userVal.firstName
     this.lastName = userVal.lastName
     this.login = userVal.login

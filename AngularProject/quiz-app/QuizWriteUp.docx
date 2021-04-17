@@ -1,0 +1,4 @@
+1. Created a HTML form to POST questions and respective options into the session storage.
+2. Created a test panel that fetches questions from the sessionStorage and renders it.
+3. On submitting the test, the answers are checked against the previously defined answers and validated.
+4. The marks and percentage are shown in the line below the submit button.

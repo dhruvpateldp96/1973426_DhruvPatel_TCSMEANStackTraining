@@ -1,0 +1,52 @@
+<div style="display: flex; flex-direction: row;">
+    <div style=" width: 50vw">
+        <h2>Ad Employee Details</h2>
+        <form #empRef="ngForm" (ngSubmit)="storeUser(empRef.value)">
+            <mat-form-field>
+                <mat-label>
+                    Id
+                </mat-label>
+                <input matInput type="text" name="id" ngModel/>
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field>
+                <mat-label>
+                    Name
+                </mat-label>
+                <input matInput type="text" name="name" ngModel/>
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field>
+                <mat-label>
+                    Task
+                </mat-label>
+                <input matInput type="text" name="task" ngModel/>
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field>
+                <mat-label>
+                    Deadline
+                </mat-label>
+                <input matInput type="text" name="deadline" ngModel/>
+            </mat-form-field>
+            <br/>
+            <button mat-stroked-button color="primary" style="background-color: darkorange;">Store</button>
+        </form>
+    </div>
+    <div style="width: 50vw">
+        <table style="width:100%; border: 1px solid gray;">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>TASK</th>
+                <th>DEADLINE</th>
+            </tr>
+            <tr *ngFor="let entry of tableData">
+                <td style=" border: 1px solid gray;">{{entry.id}}</td>
+                <td style=" border: 1px solid gray;">{{entry.name}}</td>
+                <td style=" border: 1px solid gray;">{{entry.task}}</td>
+                <td style=" border: 1px solid gray;">{{entry.deadline}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -56,6 +56,11 @@ const Landing = () => {
             <h1>Task Tracker Crud</h1>
           </Link>
         </li>
+        <li>
+          <Link className="navbar-brand nav-link text-lg brand-text" to="/chat">
+            <h1>Chat App</h1>
+          </Link>
+        </li>
       </ul>
     </div>
   );

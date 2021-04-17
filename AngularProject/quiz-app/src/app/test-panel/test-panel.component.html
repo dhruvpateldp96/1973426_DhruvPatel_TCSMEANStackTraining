@@ -1,0 +1,26 @@
+<div>
+    <form #answerForm="ngForm" (ngSubmit)="submitForm(answerForm);">
+
+        <div *ngFor="let questionObj of quiz">
+            <h1>{{questionObj.question}}</h1>
+            <div *ngFor="let option of questionObj.options">
+
+                <div>
+                <label for="{{option.choiceId}}">{{option.value}}</label>
+                <input type="radio" id="{{option.choiceId}}" name="{{questionObj.question}}" value="{{option.value}}" ngModel>
+                </div>
+
+
+   
+            </div>
+        </div>
+        <input type="submit" class="fadeIn fourth" value="Submit Test">
+
+    </form>
+
+    <div>
+        The marks are {{marksScored}} out of {{totalMarks}}
+        The percentage is {{marksScored/totalMarks*100}}
+    </div>
+
+</div>

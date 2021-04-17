@@ -1,0 +1,5 @@
+
+################################### THE CODE DESCRIPTION ###############################
+1. Used socket.io to create websocket based API
+2. Implementef socket.io client to send the object to backedn onInputChange.
+3. On each event on the socket, there is a log created in terminal

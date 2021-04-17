@@ -16,6 +16,7 @@ import BudgetPlanner from "./components/containers/P1S6-1.22BudgetPlanner/Budget
 import Blogging from "./components/containers/P1-Blogging/Blogging";
 import CartManagement from "./components/containers/P2-ShoppingCart/CartManagement";
 import TaskTracker from "./components/containers/TaskTrackerCrud/TaskTracker";
+import ChatApp from "./components/containers/ChatApp/ChatApp";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/blogs" component={Blogging} />
         <Route path="/cartmanagement" component={CartManagement} />
         <Route path="/tasktracker" component={TaskTracker} />
+        <Route path="/chat" component={ChatApp} />
 
         {/* <Route exact path="/movie/:id" component={Movie} /> */}
         <Footer />

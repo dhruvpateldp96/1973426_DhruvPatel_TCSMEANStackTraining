@@ -1,0 +1,4 @@
+1. Created a form 
+2. Pushed the form object to the json-server using POST method by using a service.
+3. onNgInit() when page loads (the page refreshes on every form submit, as I am not performing e.preventDefault). I call the GET method from the JSON server and fetch the tasks.
+4. Store the fetched object in the local state that is bound with the table render logic.
