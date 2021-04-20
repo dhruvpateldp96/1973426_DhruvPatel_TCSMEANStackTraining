@@ -1,0 +1,2 @@
+1. Iterated over JSON file and store data in a variable 
+2. Use bulk write to store data in the mongodb database 

@@ -17,6 +17,9 @@ import Blogging from "./components/containers/P1-Blogging/Blogging";
 import CartManagement from "./components/containers/P2-ShoppingCart/CartManagement";
 import TaskTracker from "./components/containers/TaskTrackerCrud/TaskTracker";
 import ChatApp from "./components/containers/ChatApp/ChatApp";
+import CoursesLanding from "./components/containers/CourseManagementMongo/CoursesLanding";
+import AddCourse from "./components/containers/CourseManagementMongo/AddCourse";
+import AllCourses from "./components/containers/CourseManagementMongo/AllCourses";
 
 const App = () => {
   return (
@@ -31,6 +34,10 @@ const App = () => {
         <Route path="/cartmanagement" component={CartManagement} />
         <Route path="/tasktracker" component={TaskTracker} />
         <Route path="/chat" component={ChatApp} />
+        <Route path="/coursemanagement" component={CoursesLanding} />
+        <Route path="/addcourse" component={AddCourse} />
+        <Route path="/getcourses" component={AllCourses} />
+        <Route path="/editcourse/:id" component={AddCourse} />
 
         {/* <Route exact path="/movie/:id" component={Movie} /> */}
         <Footer />

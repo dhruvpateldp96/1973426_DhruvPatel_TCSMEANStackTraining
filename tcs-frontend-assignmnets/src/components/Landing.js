@@ -61,6 +61,14 @@ const Landing = () => {
             <h1>Chat App</h1>
           </Link>
         </li>
+        <li>
+          <Link
+            className="navbar-brand nav-link text-lg brand-text"
+            to="/coursemanagement"
+          >
+            <h1>Course CArtManagement</h1>
+          </Link>
+        </li>
       </ul>
     </div>
   );
