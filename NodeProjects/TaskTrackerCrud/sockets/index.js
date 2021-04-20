@@ -1,5 +1,7 @@
+const dash = require("./v1/dashController");
+
 const cb = (socket) => {
-  socket.on("dash", (data) => console.log(data));
+  socket.on("dash", (data) => dash.addToDb(data));
 };
 
 module.exports = (io) => {
